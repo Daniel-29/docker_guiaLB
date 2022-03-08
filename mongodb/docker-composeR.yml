@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  app:
+    container_name: myDataBase
+    image: mongo:4.2.16
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: myUser
+      MONGO_INITDB_ROOT_PASSWORD: myPassword
+    ports:
+      - 27017:27017
+    networks:
+      backend:
+        aliases:
+          - mongodb_host
+networks:
+  backend:
+    name: backend_network
+    driver: bridge
