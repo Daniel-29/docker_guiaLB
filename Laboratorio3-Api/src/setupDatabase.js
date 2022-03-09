@@ -13,7 +13,7 @@ const connectToDatabase = async () =>{
     
   };
   try {
-    await mongoose.connect(`mongodb://myUser:myPassword@localhost:27017/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false`, connectionOptions);
+    await mongoose.connect(`mongodb://myUser:myPassword@mongodb_host:27017/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false`, connectionOptions);
     console.log('Connected to database');
     return true;
   } catch (error) {
