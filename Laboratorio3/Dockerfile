@@ -6,4 +6,4 @@ COPY yarn.lock .
 RUN yarn install
 COPY . .
 EXPOSE 5000
-CMD [ "yarn", "star" ]
+CMD [ "yarn", "start" ]
